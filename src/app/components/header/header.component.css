@@ -1,0 +1,140 @@
+.li {
+  display: inline-block;
+}
+
+.top-nav {
+  font-size: 14px;
+  font-style: bold;
+  background-color: #e2b863;
+}
+
+.bottom-nav {
+  background-color: #4b4024;
+  color: white;
+  font-size: large;
+  padding-top: -10px;
+}
+.bt-c .navbar{
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.bottom-nav,
+.bottom-nav a {
+  color: white;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  background-color: #4b4024;
+}
+
+.nav-item.dropdown .dropdown-menu{
+ color: #4b4024;
+}
+
+#logo-img {
+  width: 200px;
+}
+
+.navbar {
+  background-color: #4b4024;
+}
+
+.btn-custom {
+  background-color: #e2b863;
+  color: black;
+  padding: 10px;
+  padding-top: 10px;
+  max-height: 40px;
+  border: none;
+}
+
+.navbar-toggler {
+  color: white;
+  border-color: white;
+  padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.tgl-div {
+  display: inline-block;
+}
+
+.btn-custom {
+  background-color: #e2b863;
+  color: #000000;
+  border-radius: 10px;
+  width:180px;
+  margin-left: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px; 
+  height: 40px; 
+}
+
+.btn .btn-custom  {
+  text-decoration: none;
+  color: white;
+  color: inherit;
+  padding: 0; 
+  margin: 0;
+}
+
+.top-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.right-content {
+  margin-top: auto; 
+}
+.top-nav .container .row .hi{
+  margin: 0;
+  padding: 0;
+}
+.right-content{
+  max-height: 23px;
+}
+.left-content{
+  margin-bottom: -15px;
+}
+.btn-custom a:focus {
+  background-color: none;
+}
+  .fixed-top .full-bar .top-nav .bottom-nav{
+    padding-right: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+@media (max-width:769px){
+  #logo-img{
+    margin-left: -8%;
+  }
+}
+@media (max-width:426px){
+  .fixed-top{
+    max-width: 100%;
+  }
+}
+.dropdown-item{
+  background-color: #4b4024;
+  color: white;
+}
+i{
+  background-color: rgb(234, 205, 151);
+  padding: 3px;
+  border-radius: 10px;
+}
+
+.username{
+  margin-left: 5%;
+  padding-top: 1%;
+}

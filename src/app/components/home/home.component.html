@@ -1,0 +1,165 @@
+<section class="section-top">
+  <div id="carouselExampleDark" class="carousel carousel-dark slide">
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        data-bs-target="#carouselExampleDark"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleDark"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img
+          src="assets/images/corosal-1.png"
+          class="cn d-block w-100"
+          alt="..."
+        />
+        <div class="carousel-caption"></div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img
+          src="assets/images/corosal-2.png"
+          class="cn d-block w-100"
+          alt="..."
+        />
+        <div class="carousel-caption"></div>
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleDark"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleDark"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div class="divider-div my-4"></div>
+  <div class="container mid">
+    <div class="middle my-3">
+      <div><h3>Top Gold Jewlary Showrooms</h3></div>
+    </div>
+    <div class="shop-all-content row">
+      <div class="p-0 col-lg-9 col-md-12 col-sm-12">
+      <div class="col-lg-12 col-md-12 col-sm-12 mb-2 me-1 shops row" *ngFor="let jew of dataHome">
+        <div class="col-lg-3 col-md-3 col-sm-3">
+          <img class="shop-logos img-fluid" src={{jew.img}} />
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-9">
+          <div class="row shop-content">
+            <div class="d-flex justify-content-between">
+              <div class="shop-content-text-1 d-block">
+                <h3>{{jew.title}}</h3>
+              </div>
+              <div class="shop-content-location-1 d-flex">
+                <img
+                  class="d-block shop-location"
+                  src="	https://i.pinimg.com/originals/58/d4/80/58d4807978fba1b9e7558274b9206fda.gif"
+                />
+                <p class="d-block shop-distance">{{jew.distance}}</p>
+              </div>
+            </div>
+            <div class="d-flex justify-content-start">
+              <div class="shop-rating-number"><h6>{{jew.rating}}</h6></div>
+              <span class="shop-rating-star ms-2"
+                ><i class="fa-regular fa-star greenstar"></i
+              ></span>
+              <span class="shop-rating-star"
+                ><i class="fa-regular fa-star greenstar"></i
+              ></span>
+              <span class="shop-rating-star"
+                ><i class="fa-regular fa-star greenstar"></i
+              ></span>
+              <span class="shop-rating-star"
+                ><i class="fa-regular fa-star greenstar"></i
+              ></span>
+              <span class="shop-rating-star"
+                ><i class="fa-regular fa-star greenstar"></i
+              ></span>
+              <p class="mt-1 ms-2">{{jew.numberOfRatings}}</p>
+            </div>
+            <div class="d-flex">
+              <span
+                ><i class="fa-solid fa-location-dot"></i>{{jew.address}}</span
+              >
+            </div>
+            <div class="last-but-one-buttons d-flex my-2">
+              <div class="btn last-but-one-buttons-div d-block">sell gold</div>
+              <div class="btn last-but-one-buttons-div d-block ms-2">tests</div>
+            </div>
+            <div class="d-flex">
+              <div class="btn last-btn-1">
+                <span><i class="fa-solid fa-phone-volume"></i></span>
+                {{jew.phoneNumber}}
+              </div>
+              <div class="btn last-btn-2">veiw more</div>
+              <div class="btn last-btn-3">
+                <span><i class="fa-brands fa-whatsapp"></i></span>
+                chat
+              </div>
+            </div>
+            <div class="d-flex justify-content-end people-visited">
+              <i class="fa-solid fa-chart-line"></i>{{jew.recentlyEnquired}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="col-lg-3 col-md-12 col-sm-12 side-shop-content">
+        <div class="side-inside">
+          <h6>Get the List of Top</h6>
+          <p class="side-inside-p-1">Gold Jewellery Showrooms</p>
+          <p class="side-inside-p-2">
+            We'll send you contact details in seconds for free
+          </p>
+          <form>
+            <div class="mb-2 ff">
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="name"
+                required
+              />
+            </div>
+            <div class="mb-2 ff">
+              <input
+                type="text"
+                class="form-control"
+                id="mobilenumber"
+                placeholder="mobile number"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-custom">Get Best Deals</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="divider-div my-4"></div>
+  <div class="owl-div container">
+  <app-owl></app-owl>
+  </div>
+  <div class="divider-div my-4"></div>
+</section>
+

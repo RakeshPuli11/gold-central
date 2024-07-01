@@ -1,0 +1,10 @@
+<section class="otp d-flex flex-column align-items-center">
+  <div class="demo-container">
+    <ng-otp-input (onInputChange)="onOtpChange($event)" [config]="{length: 4, allowNumbersOnly: true}"></ng-otp-input>
+  </div>
+  <button
+    class="btn btn-custom pe-1 btn-sm mt-3"
+    (click)="otpVerify()"
+    [disabled]="!isOtpValid"
+  >Verify OTP</button>
+</section>

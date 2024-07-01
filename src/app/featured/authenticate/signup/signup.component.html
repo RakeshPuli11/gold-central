@@ -1,0 +1,210 @@
+<div class="signup container">
+  <div class="inside-all">
+    <div class="row">
+      <div class="col-lg-5 col-md-8 sign-up-left d-flex align-items-center">
+        <div class="middle-content p-5">
+          <div class="logo-image my-3">
+            <img id="logo" src="assets/user/signin/signin-gc-logo.png" />
+          </div>
+          <h3>Create your Account</h3>
+          <p>Continue where you left off</p>
+          <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="form-group s-in">
+              <label for="fullname">Full Name</label>
+              <input
+                formControlName="fullname"
+                type="text"
+                class="form-control my-3"
+                id="fullname"
+                placeholder="Enter your Full Name"
+              />
+              <span><i class="fa-regular fa-user"></i></span>
+              <div
+                *ngIf="submitted && registerForm.controls['fullname'].errors"
+                class="text-danger"
+              >
+                <div
+                  *ngIf="registerForm.controls['fullname'].errors['required']"
+                >
+                  Full name is required
+                </div>
+                <div
+                  *ngIf="registerForm.controls['fullname'].errors['minlength']"
+                >
+                  name not allowed
+                </div>
+                <div
+                  *ngIf="registerForm.controls['fullname'].errors['maxlength']"
+                >
+                  Full name should not exceed more than 15 charecters
+                </div>
+                <div
+                  *ngIf="registerForm.controls['fullname'].errors['pattern']"
+                >
+                  Special charecters and Numbers are not allowed
+                </div>
+              </div>
+            </div>
+            <div class="form-group s-in">
+              <label for="email">Email</label>
+              <input
+                formControlName="email"
+                type="email"
+                class="form-control my-3"
+                id="email"
+                placeholder="Enter your email address"
+              />
+              <span><i class="fa-regular fa-envelope"></i></span>
+              <div
+                *ngIf="submitted && registerForm.controls['email'].errors"
+                class="text-danger"
+              >
+                <div *ngIf="registerForm.controls['email'].errors['required']">
+                  Email is required
+                </div>
+                <div *ngIf="registerForm.controls['email'].errors['email']">
+                  Email is invalid
+                </div>
+              </div>
+              <div *ngIf="alert" class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Alert !</strong> user with this mail already exists
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            </div>
+            <div class="form-group s-in">
+              <label for="phonenumber">Phone Number</label>
+              <input
+                formControlName="phonenumber"
+                type="text"
+                class="form-control my-3"
+                id="phonenumber"
+                placeholder="Enter your Phone Number"
+              />
+              <span><i class="fa-solid fa-phone"></i></span>
+              <div
+                *ngIf="submitted && registerForm.controls['phonenumber'].errors"
+                class="text-danger"
+              >
+                <div
+                  *ngIf="
+                    registerForm.controls['phonenumber'].errors['required']
+                  "
+                >
+                  Phone number is required
+                </div>
+                <div
+                  *ngIf="registerForm.controls['phonenumber'].errors['pattern']"
+                >
+                  Invalid Phone Number
+                </div>
+              </div>
+            </div>
+            <div class="form-group s-in">
+              <label for="password">Password</label>
+              <input
+                formControlName="password"
+                [type]="fieldTextType1 ? 'text' : 'password'"
+                class="form-control my-3"
+                id="password"
+                placeholder="Enter your password"
+              />
+              <span
+                ><i
+                  class="fa-solid"
+                  [ngClass]="{
+                    'fa-eye-slash': !fieldTextType1,
+                    'fa-eye': fieldTextType1
+                  }"
+                  (click)="toggleFieldTextType1()"
+                ></i
+              ></span>
+              <div
+                *ngIf="submitted && registerForm.controls['password'].errors"
+                class="text-danger"
+              >
+                <div
+                  *ngIf="registerForm.controls['password'].errors['required']"
+                >
+                  Password is required
+                </div>
+                <div
+                  *ngIf="registerForm.controls['password'].errors['minlength']"
+                >
+                  Password must be at least 8 characters
+                </div>
+                <div
+                  *ngIf="registerForm.controls['password'].errors['maxlength']"
+                >
+                  Password should not exceed 20 characters
+                </div>
+                <div
+                  *ngIf="registerForm.controls['password'].errors['pattern']"
+                >
+                  1 Special charecter and 1 Number and 1 Upper and Lower Case
+                  letter is required
+                </div>
+              </div>
+            </div>
+            <div class="form-group s-in">
+              <label for="confirmpassword">Confirm Password</label>
+              <input
+                formControlName="confirmPassword"
+                [type]="fieldTextType2 ? 'text' : 'password'"
+                class="form-control my-3"
+                id="confirmpassword"
+                placeholder="Enter your Confirm Password"
+              />
+              <span
+                ><i
+                  class="fa-solid"
+                  [ngClass]="{
+                    'fa-eye-slash': !fieldTextType2,
+                    'fa-eye': fieldTextType2
+                  }"
+                  (click)="toggleFieldTextType2()"
+                ></i
+              ></span>
+              <div
+                *ngIf="
+                  submitted && registerForm.controls['confirmPassword'].errors
+                "
+                class="text-danger"
+              >
+                <div
+                  *ngIf="
+                    registerForm.controls['confirmPassword'].errors['required']
+                  "
+                >
+                  Confirm password is required
+                </div>
+                <div
+                  *ngIf="
+                    registerForm.controls['confirmPassword'].errors['matching']
+                  "
+                >
+                  Passwords do not match
+                </div>
+              </div>
+            </div>
+            <div class="form-group my-4">
+              <a href="#">Forgot password?</a>
+            </div>
+            <div class="form-group my-4">
+              <button type="submit" class="btn btn s-btn">Sign up</button>
+            </div>
+            <p class="text-center">
+              Already have an account ? <a routerLink="/authenticate/signin">Sign in</a>
+            </p>
+            <div *ngIf="submitted && !alert" class="alert alert-success alert-dismissible fade show" role="alert">
+              <strong>Success!</strong> Please verify your email.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-7 sign-up-right">
+        <img id="wrt-img" src="assets/user/signin/signin-img.png" />
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+.middle{
+    display: inline-block;
+    width: 250px;
+}
+.btn-custom{
+    background-color: #4b4024;
+    color: white;
+}
+.demo-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 500px;
+    h3 {
+      align-self: flex-start;
+    }
+  }

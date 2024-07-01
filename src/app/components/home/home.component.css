@@ -1,0 +1,218 @@
+.cn {
+    width: 100%;
+    height: 450px;
+  }
+  
+  .x {
+    margin-top: 45px;
+    margin-bottom: 30px;
+  }
+  
+  .main-two {
+    display: flex;
+    margin-top: 50px;
+    border: 1px solid;
+    border-radius: 10px;
+  }
+  
+  .c4-btn {
+    border-radius: 5px;
+    border: 0.5px;
+  }
+  
+  .section-top {
+    margin-top: 6%;
+  }
+  
+@media (max-width: 769px) {
+    .cn {
+    width: 760px;
+      height: 400px;
+    }
+    .shop-logos{
+      width: 170px;
+    }
+    .side-shop-content{
+      max-width: 350px;
+      margin-top: 10px;
+    }
+    .side-shop-content .btn-custom{
+      margin-bottom: 10px;
+    }
+}
+@media (max-width:1427){
+  .section-top {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width:426px){
+    .cn{
+        height: 310px;
+        width: 425px;
+    }
+    .shops{
+      margin-left: 2px;
+      margin-bottom: 5px;
+    }
+    .side-shop-content .btn-custom{
+      margin-bottom: 5px;
+    }
+}
+@media (max-width: 600px) {
+  .section-top {
+    padding-right: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+}
+@media (max-width: 1440px) {
+  .section-top {
+    padding-right: 0;
+    margin-right: 0;
+    /* width: 101%; */
+  }
+}
+@media (min-width:1439px){
+  .people-visited{
+    margin-top:-20px ;
+  }
+}
+@media (min-width:1023px){
+  .people-visited{
+    margin-top:5px ;
+  }
+}
+@media (max-width:769px){
+  .people-visited{
+    margin-top:15px ;
+  }
+}
+.owl-img{
+  height: 130px;
+}
+@media (max-width:320){
+  .section-top{
+    margin-top: 7%px;
+  }
+}
+.shop-logos{
+  max-width: 300px;
+}
+.shops{
+  border: 0.5px solid;
+  border-radius: 10px;
+  /* margin-left: 1%; */
+  padding: 10px;
+}
+.shop-location{
+  max-height: 24px;
+}
+.hop-content-location-1{
+ max-width: 100px;
+}
+.hop-content-location-1 p{
+  color: red;
+}
+.shop-rating-number{
+  background-color: green;
+  color: white;
+  width: 35px;
+  padding-left: 7px;
+  padding-top: 5px;
+  border-radius: 5px;
+  height:30px
+}
+.shop-rating-star{
+  color: orange;
+  padding-top: 3px;
+}
+.last-but-one-buttons-div{
+  border: 0.5px solid;
+  max-width: 100px;
+  display: inline;
+}
+.last-btn-1{
+  background-color: green;
+  color:white
+}
+.last-btn-2{
+  background-color: #4b4024;
+  color: white;
+  margin-left: 5px;
+}
+.last-btn-3{
+  border: 0.5px solid;
+  margin-left: 5px;
+}
+.side-inside{
+  width: 100%;
+}
+.side-shop-content{
+  border: 0.5px solid;
+  border-radius: 10px;
+  position: sticky;
+}
+.side-inside h6 .side-inside-p-1{
+  color: #4b4024;;
+}
+.side-inside-p-1{
+  margin-top: -5px;
+  padding: 0;
+}
+.side-inside-p-2{
+  margin-top: -10px;
+  padding: 0;
+  font-size: small;
+}
+.btn-custom{
+  background-color: #4b4024;
+  color: white;
+  width: 100%;
+}
+@media (max-width:426px){
+  .section-top{
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width:320px) and (max-width:768px) {
+  .side-shop-content{
+    width: 90%;
+    display:flex;
+    justify-content: center;
+    margin-left: 5%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 1025px) {
+  .shop-all-content .shop-logos {
+    max-width: 170px !important;
+  }
+  .side-inside .btn-custom{
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (min-width:570px) and (max-width:1440px){
+  .shop-logos{
+    width: 95%;
+  }
+}
+@media screen and (min-width:426) and (max-width:576){
+  .shops{
+    padding: 0;
+  }
+}
+.side-shop-content{
+  max-height: 250px;
+    position: sticky;
+    top: 16%;
+    padding-top: 5px;
+    font-size: small;
+  }
+
+.shop-logos{
+  width: 100%;
+}

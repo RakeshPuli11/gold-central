@@ -1,0 +1,11 @@
+.btn-custom{
+    background-color: #4b4024;
+    color: white;
+    width: 250px;
+    height: 60px;
+    font-size: 30px;
+    border-radius: 10px;
+}
+.otp{
+    margin-top: 10%;
+}

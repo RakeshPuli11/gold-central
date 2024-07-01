@@ -1,0 +1,30 @@
+.cls {
+    margin-top: 100px;
+    margin-bottom: 5vh;
+  }
+  
+  .btn {
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: #4b4024;
+  }
+  
+  .btn:hover {
+    background-color: #e2b863;
+    color: black;
+  }
+  
+  .img {
+    max-height: 50vh;
+    width: auto;
+  }
+@media (max-width: 767px) {
+    .cls {
+      margin-top: 60px;
+    }
+  
+    .img {
+      max-height: 30vh;
+    }
+  }

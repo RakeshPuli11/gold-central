@@ -1,0 +1,45 @@
+h3{
+    color:  #e2b863;
+    text-decoration: underline;
+}
+.first{
+    /* margin-top: 110px; */
+}
+.contact{
+    height: 200px;
+    width: 300px;
+    box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 15px;
+    border-radius: 10px;
+}
+.outer{
+    position: relative;
+}
+/* .outer .contact{
+    position: absolute;
+    top: -120%;
+    transform: translateX(-50%,-50%);
+} */
+.icon-div{
+    width: 100%;
+}
+.i{
+    height: 80px;
+    border-radius:50px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.contact {
+    transition: transform 0.3s ease;
+  }
+  
+  .contact:hover {
+    transform: translateY(-20px);
+    cursor: pointer;
+  }
+  a.contact {
+    text-decoration: none;
+    color: inherit; /* Inherit color from the parent */
+  }
+  .services{
+    margin-top: 10%;
+  }

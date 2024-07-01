@@ -1,0 +1,183 @@
+<header class="fixed-top">
+  <div class="full-bar">
+    <div class="top-nav d-none d-lg-block col-lg-12">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="hi col-lg-4 col-md-2">
+            <div class="left-content">
+              <p>Welcome To Gold Central</p>
+            </div>
+          </div>
+          <div class="col-lg-2"></div>
+          <div class="col-lg-6">
+            <ul class="right-content">
+              <li class="li pt-2">
+                <p class="para">
+                  <span><i class="fa-solid fa-phone-volume"></i></span> Call Us
+                  For Inquiry: +91-9087654321
+                </p>
+              </li>
+              <li class="li ms-4">
+                <p class="para">
+                  <span><i class="fa-solid fa-envelope"></i></span> Email: likitha@123gmail.com
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-nav col-12 col-md-12 col-lg-12">
+      <div class="container bt-c">
+        <nav class="navbar navbar-expand-lg">
+          <div
+            class="container d-flex justify-content-between align-items-center"
+          >
+            <a class="navbar-brand" routerLink="">
+              <img
+                id="logo-img"
+                src="assets/header/gold-central.png"
+                alt="Logo"
+              />
+            </a>
+            <button
+              class="navbar-toggler tgl-div d-lg-none"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-expanded="false"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div
+              class="offcanvas-header"
+              style="background-color: #4b4024; color: #fff"
+            >
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                <b>Gold Central</b>
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div
+              class="offcanvas-body"
+              style="background-color: #4b4024; color: white"
+            >
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    routerLink=""
+                    data-bs-dismiss="offcanvas"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    routerLink="/about"
+                    data-bs-dismiss="offcanvas"
+                    >About</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    routerLink="/services"
+                    id="navbarDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Services
+                  </a>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDropdownMenuLink"
+                  >
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        routerLink="/updates"
+                        data-bs-dismiss="offcanvas"
+                        >Sell Gold</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        routerLink="/updates"
+                        data-bs-dismiss="offcanvas"
+                        >KJ</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        routerLink="/updates"
+                        data-bs-dismiss="offcanvas"
+                        >Random</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    routerLink="/updates"
+                    data-bs-dismiss="offcanvas"
+                    >Updates</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    routerLink="/contactus"
+                    data-bs-dismiss="offcanvas"
+                    >Contact</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <button
+                    class="btn btn-custom"
+                    *ngIf="!_authService.loggedIn()"
+                    [routerLink]="['/authenticate/signin']"
+                    routerLinkActive="active"
+                    data-bs-dismiss="offcanvas"
+                  >
+                    Login/Register
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button
+                    class="btn btn-custom ms-5"
+                    style="cursor: pointer"
+                    *ngIf="username()"
+                    (click)="_authService.loggedOut()"
+                    routerLinkActive="active"
+                  >
+                    Logout
+                  </button>
+                </li>
+                <p class="username">{{userName}}</p>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
